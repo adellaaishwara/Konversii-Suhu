@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <title>Set and Get Value Javascript</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css"> 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+       celciusfahrenheit = () =>{
+            let input = document.getElementById('celcius').value;
+            let hasil = (input * (9/5)) + 32;
+            document.getElementById('hasil').value = hasil;
+       }
+       celciusreamur = () =>{
+            let input = document.getElementById('celcius').value;
+            let hasil = (input * (4/5));
+            document.getElementById('hasil').value = hasil;
+       }
+       celciuskelvin = () =>{
+            let input = document.getElementById('celcius').value;
+            let hasil = (input + (273));
+            document.getElementById('hasil').value = hasil;
+       }
+       fahrenheitcelcius = () =>{
+            let input = document.getElementById('fahrenheit').value;
+            let hasil = ((9/5) * (input-32));
+            document.getElementById('hasil').value = hasil;
+       }
+       fahrenheitreamur = () =>{
+            let input = document.getElementById('fahrenheit').value;
+            let hasil = ((4/9) * input - (273));
+            document.getElementById('hasil').value = hasil;
+       }
+       fahrenheitkelvin = () =>{
+            let input = document.getElementById('fahrenheit').value;
+            let hasil = ((4/5) * input - (273));
+            document.getElementById('hasil').value = hasil;
+       }
+       reamurcelcius = () =>{
+            let input = document.getElementById('reamur').value;
+            let hasil = ((5/4) * input);
+            document.getElementById('hasil').value = hasil;
+       }
+       reamurfahrenheit = () =>{
+            let input = document.getElementById('reamur').value;
+            let hasil = ((9/4) * input + (32));
+            document.getElementById('hasil').value = hasil;
+       }
+       reamurkelvin = () =>{
+            let input = document.getElementById('reamur').value;
+            let hasil = ((5/4) * input + (273));
+            document.getElementById('hasil').value = hasil;
+       }
+       kelvincelcius = () =>{
+            let input = document.getElementById('kelvin').value;
+            let hasil = (input - (273));
+            document.getElementById('hasil').value = hasil;
+       }
+       kelvinfahrenheit = () =>{
+            let input = document.getElementById('kelvin').value;
+            let hasil = ((9/5) * input - (273) + 32);
+            document.getElementById('hasil').value = hasil;
+       }
+       kelvinreamur = () =>{
+            let input = document.getElementById('kelvin').value;
+            let hasil = ((4/5) * input - (273));
+            document.getElementById('hasil').value = hasil;
+       }
+                
+                
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card col-sm-8">
+            <div class="card-header">
+                <button type="button" class="btn btn-lg btn-info btn-block">Konversi Suhu</button>
+            </div>
+            <div class="card-body"> Celcius 
+                <input type="number" id="celcius" class="form-control"> Konversi
+                <div class="card-footer">
+                <button type="button" class="btn btn-info btn-block" onclick="celciusfahrenheit()"> Celcius to Fahrenheit
+                <button type="button" class="btn btn-dark btn-block" onclick="celciusreamur()">  Celcius to Reamur
+                <button type="button" class="btn btn-secondary btn-block" onclick="celciuskelvin()"> Celcius to Kelvin
+
+            </div>
+            <div class="card-body"> Fahrenheit
+                <input type="number" id="fahrenheit" class="form-control"> Konversi
+                <div class="card-footer">
+                <button type="button" class="btn btn-info btn-block" onclick="fahrenheitcelcius()"> Fahrenheit to Celcius
+                <button type="button" class="btn btn-dark btn-block" onclick="fahrenheitreamur()"> Fahrenheit to Reamur
+                <button type="button" class="btn btn-secondary btn-block" onclick="fahrenheitkelvin()"> Fahrenheit to Kelvin
+            </div>
+
+            <div class="card-body"> Reamur
+                <input type="number" id="reamur" class="form-control"> Konversi
+                <div class="card-footer">
+                <button type="button" class="btn btn-info btn-block" onclick="reamurcelcius()"> Reamur to Celcius
+                <button type="button" class="btn btn-dark btn-block" onclick="reamurfahrenheit()"> Reamur to Fahrenheit
+                <button type="button" class="btn btn-secondary btn-block" onclick="reamurkelvin()"> Reamur to Kelvin
+            </div>
+
+            <div class="card-body"> Kelvin
+                <input type="number" id="kelvin" class="form-control"> Konversi
+                <div class="card-footer">
+                <button type="button" class="btn btn-info btn-block" onclick="kelvincelcius()"> Kelvin to Celcius
+                <button type="button" class="btn btn-dark btn-block" onclick="kelvinfahrenheit()"> Kelvin to Fahrenheit
+                <button type="button" class="btn btn-secondary btn-block" onclick="kelvinreamur()"> Kelvin to Reamur
+            </div>
+            
+            <div class="card-body"> H A S I L
+                <input type="text" id="hasil" class="form-control" readonly>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
